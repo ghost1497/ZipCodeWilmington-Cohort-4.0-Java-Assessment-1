@@ -1,6 +1,5 @@
 package com.zipcodewilmington.assessment1.part3;
 
-import com.zipcodewilmington.assessment1.part2.ArrayUtils;
 
 import java.util.ArrayList;
 
@@ -8,8 +7,8 @@ import java.util.ArrayList;
  * Created by leon on 2/16/18.
  */
 public class PetOwner {
-    String name;
-    Pet[] pets;
+    private String name;
+    private Pet[] pets;
     /**
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
@@ -41,7 +40,7 @@ public class PetOwner {
                 buffer.add(entry);
             }
         }
-        pets = buffer.toArray(new Pet[buffer.size()]);
+        this.pets = buffer.toArray(new Pet[buffer.size()]);
     }
 
     /**
@@ -49,7 +48,10 @@ public class PetOwner {
      * @return true if I own this pet
      */
     public Boolean isOwnerOf(Pet pet) {
-        if (this.name.equals(pet.getName())){
+        String petOwnerName = String.valueOf(pet.getOwner());
+        //System.out.println(petOwnerName);
+        System.out.println(this.name);
+        if (this.name.equals(petOwnerName)){
             return true;
         }
         return false;

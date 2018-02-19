@@ -69,8 +69,4 @@ public class Cat extends Pet {
         return age;
     }
 
-    @Override
-    public PetOwner getOwner() {
-        return super.getOwner();
-    }
 }

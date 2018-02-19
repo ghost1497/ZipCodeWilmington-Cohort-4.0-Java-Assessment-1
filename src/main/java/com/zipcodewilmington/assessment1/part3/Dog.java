@@ -6,6 +6,7 @@ package com.zipcodewilmington.assessment1.part3;
 public class Dog extends Pet {
     String name;
     Integer age;
+    PetOwner petOwner;
     /**
      * @param name name of this Dog
      * @param age age of this dog
@@ -54,6 +55,7 @@ public class Dog extends Pet {
         };
         return dog.speak();
     }
+
 
     //getters
     @Override

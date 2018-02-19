@@ -79,7 +79,7 @@ public class PetOwnerTest {
         // When
         boolean outcome = po.isOwnerOf(newPet);
         boolean poOwnsAnotherPet = po.isOwnerOf(anotherPet);
-
+        System.out.println(outcome);
         // Then
         Assert.assertTrue(outcome);
         Assert.assertFalse(poOwnsAnotherPet);
