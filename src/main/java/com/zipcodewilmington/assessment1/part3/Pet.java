@@ -6,7 +6,7 @@ package com.zipcodewilmington.assessment1.part3;
 public abstract class Pet implements Animal {
     String name;
     Integer age;
-    PetOwner petOwner = new PetOwner(name);
+    PetOwner petOwner;
     /**
      * nullary constructor
      * by default, pet has age of 0; name of "";

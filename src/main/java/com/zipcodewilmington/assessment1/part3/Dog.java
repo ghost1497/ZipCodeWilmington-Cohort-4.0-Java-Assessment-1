@@ -54,4 +54,20 @@ public class Dog extends Pet {
         };
         return dog.speak();
     }
+
+    //getters
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public Integer getAge() {
+        return age;
+    }
+
+    @Override
+    public PetOwner getOwner() {
+        return super.getOwner();
+    }
 }

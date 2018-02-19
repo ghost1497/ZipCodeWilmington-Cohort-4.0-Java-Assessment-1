@@ -55,4 +55,22 @@ public class Cat extends Pet {
         };
         return cat.speak();
     }
+
+    //getters
+
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public Integer getAge() {
+        return age;
+    }
+
+    @Override
+    public PetOwner getOwner() {
+        return super.getOwner();
+    }
 }
