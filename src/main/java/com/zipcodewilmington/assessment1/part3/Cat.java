@@ -7,7 +7,6 @@ public class Cat extends Pet {
 
     protected String name;
     protected Integer age;
-    PetOwner owner = new PetOwner(name);
     /**
      * @param name name of this Cat
      * @param age age of this Cat
@@ -55,20 +54,5 @@ public class Cat extends Pet {
             }
         };
         return cat.speak();
-    }
-
-    public String getName(){
-        return this.name;
-    }
-    public Integer getAge(){
-        return this.age;
-    }
-    public void setOwner(PetOwner owner){
-        this.owner = owner;
-    }
-
-    @Override
-    public PetOwner getOwner() {
-        return owner;
     }
 }

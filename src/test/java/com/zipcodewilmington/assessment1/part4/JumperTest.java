@@ -6,60 +6,60 @@ import org.junit.Test;
 public class JumperTest {
 
     @Test
-    public void solution0(){
+    public void solution0() {
         Jumper jumper = new Jumper();
-        Integer expected = jumper.jumps(3,1);
-        Integer actual = 3;
+        Integer actual = jumper.jumps(3, 1);
+        Integer expected = 3;
         Assert.assertEquals(expected, actual);
 
     }
 
     @Test
-    public void solution1(){
+    public void solution1() {
         // Should assert to true
         Jumper jumper = new Jumper();
-        Integer expected = jumper.jumps(3,2);
-        Integer actual = 2;
+        Integer actual = jumper.jumps(3, 2);
+        Integer expected = 2;
         Assert.assertEquals(expected, actual);
 
     }
 
     @Test
-    public void solution2(){
+    public void solution2() {
         // Should assert to true
         Jumper jumper = new Jumper();
-        Integer expected = jumper.jumps(3,3);
-        Integer actual = 1;
+        Integer actual = jumper.jumps(3, 3);
+        Integer expected = 1;
         Assert.assertEquals(expected, actual);
 
     }
 
     @Test
-    public void solution3(){
+    public void solution3() {
         // Should assert to true
         Jumper jumper = new Jumper();
-        Integer expected = jumper.jumps(16808,282475250);
-        Integer actual = 16808;
+        Integer expected = 16808;
+        Integer actual = jumper.jumps(16808, 282475250);
         Assert.assertEquals(expected, actual);
 
     }
 
     @Test
-    public void solution4(){
+    public void solution4() {
         // Should assert to true
         Jumper jumper = new Jumper();
-        Integer expected = jumper.jumps(458777924,7237710);
-        Integer actual = 2802257;
+        Integer actual = jumper.jumps(458777924, 7237710);
+        Integer expected = 2802257;
         Assert.assertEquals(expected, actual);
 
     }
 
     @Test
-    public void solution5(){
+    public void solution5() {
         // Should assert to true
         Jumper jumper = new Jumper();
-        Integer expected = jumper.jumps(823564441,115438166);
-        Integer actual = 15497286;
+        Integer actual = jumper.jumps(823564441, 115438166);
+        Integer expected = 15497286;
         Assert.assertEquals(expected, actual);
 
     }
