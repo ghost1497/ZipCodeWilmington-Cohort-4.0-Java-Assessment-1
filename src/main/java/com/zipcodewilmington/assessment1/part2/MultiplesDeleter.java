@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment1.part2;
 
+import java.util.ArrayList;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -10,7 +12,12 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with evens removed
      */
     public Integer[] deleteEvens(Integer[] ints) {
-        return null;
+        for(int i = 0; i < ints.length; i++) {
+            if(ints[i] % 2 == 0) {
+                ints = ArrayUtils.removeValue(ints, ints[i]);
+            }
+        }
+        return ints;
     }
 
     /**
@@ -19,7 +26,12 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with odds removed
      */
     public Integer[] deleteOdds(Integer[] ints) {
-        return null;
+        for(int i = 0; i < ints.length; i++) {
+            if(ints[i] % 2 == 1) {
+                ints = ArrayUtils.removeValue(ints, ints[i]);
+            }
+        }
+        return ints;
     }
 
     /**
@@ -28,7 +40,14 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by 3 removed
      */
     public Integer[] deleteMultiplesOf3(Integer[] ints) {
-        return null;
+        ArrayList<Integer> buffer = new ArrayList<>();
+        for (Integer entry : ints) {
+            if (!(entry % 3 == 0)) {
+                buffer.add(entry);
+            }
+        }
+        ints = buffer.toArray(new Integer[buffer.size()]);
+        return ints;
     }
 
     /**
@@ -38,6 +57,13 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by `multiple` removed
      */
     public Integer[] deleteMultiplesOfN(Integer[] ints, int multiple) {
-        return null;
+        ArrayList<Integer> buffer = new ArrayList<>();
+        for (Integer entry : ints) {
+            if (!(entry % multiple == 0)) {
+                buffer.add(entry);
+            }
+        }
+        ints = buffer.toArray(new Integer[buffer.size()]);
+        return ints;
     }
 }
