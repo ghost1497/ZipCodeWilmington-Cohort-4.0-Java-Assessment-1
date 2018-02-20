@@ -23,12 +23,15 @@ public class PetOwner {
      */
     public void addPet(Pet pet) {
         ArrayList<Pet> theMiddleMan = new ArrayList<>();
-        for (Pet entry : this.pets) {
-            theMiddleMan.add(entry);
+        if(this.pets != null) {
+            for (Pet entry : this.pets) {
+                theMiddleMan.add(entry);
             }
+        }
         theMiddleMan.add(pet);
-        pets = theMiddleMan.toArray(new Pet[theMiddleMan.size()]);
-    }
+        pet.setOwner(this);
+        this.pets = theMiddleMan.toArray(new Pet[theMiddleMan.size()]);
+        }
 
     /**
      * @param pet pet to be removed from the composite collection Pets
@@ -40,7 +43,7 @@ public class PetOwner {
                 buffer.add(entry);
             }
         }
-        this.pets = buffer.toArray(new Pet[buffer.size()]);
+        buffer.toArray(this.pets);
     }
 
     /**
@@ -48,11 +51,11 @@ public class PetOwner {
      * @return true if I own this pet
      */
     public Boolean isOwnerOf(Pet pet) {
-        String petOwnerName = String.valueOf(pet.getOwner());
-        //System.out.println(petOwnerName);
-        System.out.println(this.name);
-        if (this.name.equals(petOwnerName)){
-            return true;
+        //THIS TOOK ME A WHOLE HOUR BUT IT WAS SOOOO SIMPLE
+        for(Pet entry : pets) {
+            if (entry.equals(pet)) {
+                return true;
+            }
         }
         return false;
     }
