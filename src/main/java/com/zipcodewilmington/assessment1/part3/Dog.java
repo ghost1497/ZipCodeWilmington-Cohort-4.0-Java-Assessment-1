@@ -7,9 +7,10 @@ public class Dog extends Pet {
     String name;
     Integer age;
     PetOwner petOwner;
+
     /**
      * @param name name of this Dog
-     * @param age age of this dog
+     * @param age  age of this dog
      */
     public Dog(String name, Integer age) {
         this.name = name;
